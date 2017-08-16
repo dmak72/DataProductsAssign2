@@ -10,9 +10,9 @@ knitr::opts_chunk$set(echo = FALSE)
 require(plotly)
 ```
 ## Scatterplot of US Economics Data
-Three Dimensional scatter plot of the unemployment rate (unemploy), personal consumption expenditures in billions of dollars (pce) and popluation in thousands (pop) over time (date).
-```{r}
-plot_ly(data=economics,x= ~date, y=~unemploy,z=~pop, type="scatter3d",mode="markers", color = ~pce)
+Scatter plot of the unemployment rate (unemploy), personal consumption expenditures in billions of dollars (pce) and popluation in thousands (pop).
+```{r, message=FALSE}
+plot_ly(data=economics,x= ~pop, y=~unemploy, mode="markers", color = ~pce)
 ```
 
 
