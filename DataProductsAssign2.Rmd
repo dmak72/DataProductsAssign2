@@ -1,0 +1,23 @@
+---
+title: "Assignment 2: A Test of R Markdown Presentation with Plotly"
+author: "David M."
+date: '2017-08-15'
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(plotly)
+```
+## Scatterplot of US Economics Data
+Three Dimensional scatter plot of the unemployment rate (unemploy), personal consumption expenditures in billions of dollars (pce) and popluation in thousands (pop) over time (date).
+```{r}
+plot_ly(data=economics,x= ~date, y=~unemploy,z=~pop, type="scatter3d",mode="markers", color = ~pce)
+```
+
+
+## Boxplot of Crop Yields
+Boxplot from an experiment to compare yields (as measured by dried weight of plants) obtained under a control and two different treatment conditions.
+```{r}
+plot_ly(data=PlantGrowth, y = ~weight,x=~group, type = "box", color = ~group)
+```
